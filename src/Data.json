@@ -1,0 +1,25 @@
+{
+    "Rooms": [
+        {
+            "id": 1,
+            "name": "Standard Room",
+            "description": "A comfortable room with basic amenities.",
+            "price": 100,
+            "image": "standard-room.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Deluxe Room",
+            "description": "A spacious room with premium features.",
+            "price": 150,
+            "image": "deluxe-room.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Suite",
+            "description": "An elegant suite with luxurious amenities.",
+            "price": 250,
+            "image": "suite.jpg"
+        }
+    ]
+}

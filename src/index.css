@@ -1,0 +1,43 @@
+:root {
+  /* COLOURS */
+  --text: rgb(15, 6, 6);
+  --pri-bg: rgb(255, 254, 252);
+  --sec-bg: rgb(255, 245, 238);
+  --border: rgb(139, 108, 38);
+  --accent: rgb(139, 108, 38);
+  --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --nav-bg: rgba(0, 0, 0, 0.3);
+
+  /* FONTS */
+  --body-font: "Jost", sans-serif;
+  --heading-font: "Bodoni Moda", serif;
+  
+  /* TRANSITIONS */
+  --transition-slow: .6s;
+  --transition-regular: .3s;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --text: rgb(15, 6, 6);
+    --pri-bg: #16171d;
+    --sec-bg: #1f2028;
+    --border: #2e303a;
+    --accent: #c084fc;
+    --shadow: rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
