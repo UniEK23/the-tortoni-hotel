@@ -17,7 +17,7 @@ function Hero() {
       </div>
 
       <div className="hero__content">
-        <h1 className="hero__title">A quiet table in Vernice.</h1>
+        <h1 className="hero__title">Your quiet escape in Vernice.</h1>
         <p className="hero__sub">Rooms, a terrace and an unhurried welcome.</p>
         <a className="hero__cta" href="#contact">
           Reserve a room
