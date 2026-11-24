@@ -63,6 +63,11 @@
   animation: hero-pop 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) 1.3s both;
 }
 
+.hero__cta:hover {
+  background: var(--canvas);
+  color: var(--ink);
+}
+
 @keyframes hero-open {
   from {
     clip-path: inset(18% 30% round 4px);
