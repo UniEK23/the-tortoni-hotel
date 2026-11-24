@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { rooms } from "../../data/rooms";
 import { formatPrice } from "../../utils/formatPrice";
+import GiltFrame from "../GiltFrame/giltFrame";
 import "./roomsPreview.css";
 
 function RoomsPreview() {
@@ -34,7 +35,7 @@ function RoomsPreview() {
     return (
         <section className="rooms" id="rooms">
             <div className="rooms__head">
-                <h2 className="rooms__title">Rooms &amp; Suites</h2>
+                <h2 className="display-fade">Rooms</h2>
                 <p className="rooms__intro">
                     Some hotels want you to rush. We don’t. Quiet rooms, good light and a front desk that remembers your name.
                 </p>
@@ -44,25 +45,28 @@ function RoomsPreview() {
                 {rooms.map((r, i) => (
                     <article className="room-card" key={r.id} style={{"--i": i}}>
                         <a href={`#${r.id}`} className="room-card__media" aria-label={`View ${r.name}`}>
-                            <span className="room-card__img">
-                                {r.image ? (
-                                    <img
-                                        src={r.image}
-                                        alt={r.alt}
-                                        width="800"
-                                        height="1000"
-                                        loading="lazy"
-                                        decoding="async"
-                                    />
-                                ) : (
-                                    <span className="room-card__placeholder">
-                                        Photo: {r.name}
-                                    </span>
-                                )}
-                            </span>
+                            <GiltFrame variant="thin">
+                                <span className="room-card__img">
+                                    {r.image ? (
+                                        <img
+                                            src={r.image}
+                                            alt={r.alt}
+                                            width="800"
+                                            height="1000"
+                                            loading="lazy"
+                                            decoding="async"
+                                        />
+                                    ) : (
+                                        <span className="room-card__placeholder">
+                                            Photo: {r.name}
+                                        </span>
+                                    )}
+                                </span>
+                            </GiltFrame>
                         </a>
 
                         <div className="room-card__body">
+                            <p className="room-card__type">{r.type}</p>
                             <h3 className="room-card__name">{r.name}</h3>
                             <p className="room-card__blurb">{r.blurb}</p>
 

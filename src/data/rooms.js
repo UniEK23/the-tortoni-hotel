@@ -1,7 +1,8 @@
 export const rooms = [
     {
         id: "classic",
-        name: "Classic Room",
+        name: "Le Balcon",
+        type: "Classic Room",
         description: "A calm room for one or two. Crisp linen, a writing desk and a window worth sitting at.",
         beds: "1 king bed",
         size: "28 sq m",
@@ -12,7 +13,8 @@ export const rooms = [
     },
     {
         id: "deluxe",
-        name: "Deluxe Room",
+        name: "Argenteuil",
+        type: "Deluxe Room",
         description: "More space to stretch out, a reading chair and a bathroom that takes its time.",
         beds: "1 king bed",
         size: "36 sq m",
@@ -23,7 +25,8 @@ export const rooms = [
     },
     {
         id: "suite",
-        name: "Executive Suite",
+        name: "Folies-Bergère",
+        type: "Executive Suite",
         description: "Our largest. A separate sitting room, a long table and the best light in the house.",
         beds: "1 king bed + sofa",
         size: "58 sq m",

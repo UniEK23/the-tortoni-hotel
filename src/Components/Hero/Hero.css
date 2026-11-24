@@ -34,7 +34,7 @@
   max-width: 44rem;
   padding: 6rem 1.5rem 3rem;
   text-align: center;
-  color: var(--pri-bg);
+  color: var(--text);
 }
  
 .hero__title {

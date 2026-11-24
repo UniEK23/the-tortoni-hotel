@@ -1,12 +1,27 @@
 :root {
   /* COLOURS */
-  --text: rgb(15, 6, 6);
-  --pri-bg: rgb(255, 254, 252);
-  --sec-bg: rgb(255, 245, 238);
-  --border: rgb(139, 108, 38);
-  --accent: rgb(139, 108, 38);
+  /* --text: rgb(15, 6, 6); */
+  /* --pri-bg: rgb(255, 254, 252); */
+  /* --sec-bg: rgb(255, 245, 238); */
+  /* --border: rgb(139, 108, 38); */
+  /* --accent: rgb(139, 108, 38); */
+
+  /* Palette, sampled in spirit from Manet's Chez Tortoni */
+  --ink: #16140f;          /* the black coat */
+  --canvas: #f1ebdd;       /* bare canvas, used as the "white" */
+  --cafe-green: #2e3b32;   /* feature bands */
+  --warm-grey: #8c857a;
+ 
+  /* Names your components already use */
+  --text: var(--canvas);
+  --pri-bg: var(--ink);
+  --sec-bg: #1f1c16;
+  --border: rgba(201, 162, 76, 0.55);
+  --accent: #c9a24c;       /* gilt gold, for lines and large type */
+  --nav-bg: rgba(22, 20, 15, 0.85);
+
   --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
-  --nav-bg: rgba(0, 0, 0, 0.3);
+  /* --nav-bg: rgba(0, 0, 0, 0.3); */
 
   /* FONTS */
   --body-font: "Jost", sans-serif;
@@ -41,3 +56,42 @@
   scroll-behavior: smooth;
 }
 
+body {
+  background: var(--pri-bg);
+  color: var(--text);
+}
+ 
+/* Big display words: the first letter becomes a larger italic initial.
+   Needs Bodoni Moda italic loaded (see the font link in the reply). */
+.display {
+  font-family: var(--heading-font);
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+ 
+.display::first-letter {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.3em;
+}
+ 
+/* Giant section word that fades into the dark, like "ROOMS" */
+.display-fade {
+  font-family: var(--heading-font);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: clamp(4.5rem, 16vw, 13rem);
+  line-height: 0.95;
+  text-align: center;
+  background: linear-gradient(180deg, var(--canvas) 10%, var(--warm-grey) 60%, transparent 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+ 
+/* Deep green feature band */
+.band-green {
+  background: var(--cafe-green);
+  color: var(--canvas);
+}

@@ -15,6 +15,12 @@ a {
     text-align: center;
 }
 
+.rooms__head { max-width: 64rem; }
+.rooms__head .display-fade {
+  font-size: clamp(3.5rem, 13vw, 10rem);
+  margin-bottom: 1rem;
+}
+
 .rooms__title {
     font-family: var(--heading-font);
     font-weight: 500;
@@ -27,6 +33,13 @@ a {
     margin-top: 1rem;
     font-size: 1.15rem;
     line-height: 1.6;
+}
+
+.room-card__type {
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
 }
 
 .rooms__grid {
@@ -53,9 +66,6 @@ a {
 /* Photo framed (in a thin gilt frame) */
 .room-card__media {
     display: block;
-    padding: 0.5rem;
-    border: 1px solid var(--border);
-    background: var(--sec-bg);
 }
 
 .room-card__img {
