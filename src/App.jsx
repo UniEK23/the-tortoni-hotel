@@ -1,6 +1,7 @@
 import Nav from './Components/Nav/Nav'
 import Hero from './Components/Hero/Hero'
 import RoomsPreview from './Components/RoomsPreview/roomsPreview'
+import Story from './Components/Story/Story'
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Nav />
       <Hero />
       <RoomsPreview />
+      <Story />
     </>
   )
 }

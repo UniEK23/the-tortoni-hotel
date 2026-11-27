@@ -1,4 +1,4 @@
-import "./GiltFrame.css";
+import "./giltFrame.css";
  
 // Wrap anything (usually an <img>) in a gilded picture frame.
 //   <GiltFrame><img src={photo} alt="..." /></GiltFrame>
