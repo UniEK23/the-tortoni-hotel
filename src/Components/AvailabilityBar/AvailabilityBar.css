@@ -1,0 +1,86 @@
+/* Sits across the bottom edge of the hero */
+.availability {
+  position: relative;
+  z-index: 5;
+  max-width: 62rem;
+  margin: -2.75rem auto 0;
+  padding: 0 1.25rem;
+  animation: hero-pop 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) 1.3s both;
+}
+
+.availability__form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) auto;
+  gap: 1rem;
+  align-items: end;
+  padding: 1.25rem 1.5rem;
+  background: var(--sec-bg);
+  border: 1px solid var(--border);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+.availability__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-family: var(--body-font);
+}
+
+.availability__field span {
+  font-size: 0.9rem;
+  color: var(--accent);
+}
+
+.availability__field input,
+.availability__field select {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  background: var(--pri-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  color-scheme: dark;
+}
+
+.availability__btn {
+  padding: 0.85rem 1.6rem;
+  background: var(--accent);
+  color: var(--ink);
+  border: 0;
+  border-radius: 4px;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background var(--transition-regular);
+}
+
+.availability__btn:hover {
+  background: var(--canvas);
+}
+
+.availability__error {
+  grid-column: 1 / -1;
+  font-family: var(--body-font);
+  font-size: 0.95rem;
+  color: #f2b8a8;
+}
+
+.availability__field input:focus-visible,
+.availability__field select:focus-visible,
+.availability__btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 720px) {
+  .availability {
+    margin-top: -1.5rem;
+  }
+
+  .availability__form {
+    grid-template-columns: 1fr;
+  }
+}
