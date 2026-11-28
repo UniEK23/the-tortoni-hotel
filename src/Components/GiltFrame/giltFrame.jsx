@@ -1,7 +1,6 @@
 import "./giltFrame.css";
  
-// Wrap anything (usually an <img>) in a gilded picture frame.
-//   <GiltFrame><img src={photo} alt="..." /></GiltFrame>
+// Wrap every image in a gilded picture frame.
 //   <GiltFrame variant="thin">...</GiltFrame>
 function GiltFrame({ children, variant = "default", className = "" }) {
   return (

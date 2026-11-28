@@ -1,0 +1,162 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100svh;
+  padding: 7rem 1.25rem 6rem;
+  text-align: center;
+  background: var(--pri-bg);
+  overflow: hidden;
+}
+
+.hero__title {
+  margin-bottom: 2.25rem;
+  font-size: clamp(3.25rem, 11vw, 9rem);
+  line-height: 0.95;
+  animation: hero-pop 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s backwards;
+}
+
+.hero__stage {
+  position: relative;
+  width: min(100%, 60rem);
+}
+
+/* The frame opens out on load */
+.hero__window {
+  animation: hero-open 1.2s cubic-bezier(0.77, 0, 0.18, 1) 0.3s backwards;
+  will-change: clip-path;
+}
+
+.hero__window .gilt__inner {
+  overflow: hidden;
+}
+
+.hero__img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  animation: hero-settle 1.6s cubic-bezier(0.22, 0.61, 0.36, 1) 0.3s backwards;
+}
+
+.hero__cutout {
+  position: absolute;
+  left: clamp(-3rem, -4vw, -1rem);
+  bottom: -1.5rem;
+  z-index: 2;
+  height: 72%;
+  width: auto;
+  pointer-events: none;
+  filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.6));
+  animation: hero-pop 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) 1.3s backwards;
+}
+
+/* Round call-to-action, overlapping the frame corner */
+.hero__cta {
+  position: absolute;
+  right: clamp(0.5rem, 3vw, 2rem);
+  bottom: -3rem;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--ink);
+  font-family: var(--body-font);
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
+  transition: transform var(--transition-regular),
+    background var(--transition-regular);
+  animation: hero-pop 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) 1.2s backwards;
+}
+
+@media (hover: hover) {
+  .hero__cta:hover {
+    transform: scale(1.06);
+    background: var(--canvas);
+  }
+}
+
+.hero__cta:focus-visible {
+  outline: 2px solid var(--canvas);
+  outline-offset: 4px;
+}
+
+.hero__tagline {
+  margin-top: 4.5rem;
+  font-family: var(--heading-font);
+  font-size: clamp(1.5rem, 3.4vw, 2.25rem);
+  line-height: 1.2;
+  animation: hero-pop 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) 1.4s backwards;
+}
+
+.hero__sub {
+  margin-top: 0.75rem;
+  font-family: var(--body-font);
+  font-size: 1.1rem;
+  opacity: 0.85;
+  animation: hero-pop 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) 1.5s backwards;
+}
+
+/* The end state clips beyond the frame so its shadow isn't cut off */
+@keyframes hero-open {
+  from {
+    clip-path: inset(18% 30% round 4px);
+  }
+  to {
+    clip-path: inset(-3rem -3rem -4rem -3rem);
+  }
+}
+
+@keyframes hero-settle {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes hero-pop {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero__cta {
+    width: 6.5rem;
+    height: 6.5rem;
+    bottom: -2.25rem;
+    font-size: 0.9rem;
+  }
+
+  .hero__cutout {
+    display: none;
+  }
+
+  .hero__tagline {
+    margin-top: 3.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__title,
+  .hero__window,
+  .hero__img,
+  .hero__cutout,
+  .hero__cta,
+  .hero__tagline,
+  .hero__sub {
+    animation: none;
+  }
+}

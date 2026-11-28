@@ -1,10 +1,13 @@
 import GiltFrame from "../GiltFrame/giltFrame";
 import "./Story.css";
 import painting from "../../assets/images/Édouard_Manet_Chez_Tortoni.jpeg";
+import { useReveal } from "../../hooks/useReveal";
 
 function Story() {
+    const ref = useReveal();
+
     return (
-        <section className="story band-green" id="about">
+        <section className="story band-green" id="about" ref={ref}>
             <div className="story__inner">
                 <div className="story__text">
                     <p className="story__label">Why "Tortoni"?</p>

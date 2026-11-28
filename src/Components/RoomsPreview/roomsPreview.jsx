@@ -2,9 +2,11 @@ import { useEffect, useRef } from "react";
 import { rooms } from "../../data/rooms";
 import { formatPrice } from "../../utils/formatPrice";
 import GiltFrame from "../GiltFrame/giltFrame";
+import { useReveal } from "../../hooks/useReveal";
 import "./roomsPreview.css";
 
 function RoomsPreview() {
+    const ref = useReveal();
     const gridRef = useRef(null);
 
     // Fade cards up as they scroll into view
@@ -33,7 +35,7 @@ function RoomsPreview() {
     }, []);
 
     return (
-        <section className="rooms" id="rooms">
+        <section className="rooms" id="rooms" ref={ref}>
             <div className="rooms__head">
                 <h2 className="display-fade">Rooms</h2>
                 <p className="rooms__intro">

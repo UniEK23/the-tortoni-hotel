@@ -3,7 +3,7 @@ import { site } from "../../data/site";
 import { useReveal } from "../../hooks/useReveal";
 import "./AvailabilityBar.css";
 
-// Today's date as YYYY-MM-DD in the visitor's own timezone
+// Today's date format as YYYY-MM-DD in the visitor's own timezone
 function localToday() {
   const now = new Date();
   return new Date(now.getTime() - now.getTimezoneOffset() * 60000)

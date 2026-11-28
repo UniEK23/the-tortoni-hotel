@@ -1,0 +1,75 @@
+.footer {
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.25rem, 5vw, 4rem) 2rem;
+  background: var(--pri-bg);
+  border-top: 1px solid var(--border);
+  font-family: var(--body-font);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 76rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer__grid {
+    grid-template-columns: 1.3fr 1fr 1fr 0.8fr;
+  }
+}
+
+.footer__brand {
+  font-family: var(--heading-font);
+  font-size: 1.8rem;
+}
+
+.footer__line {
+  margin-top: 0.5rem;
+  opacity: 0.85;
+}
+
+.footer__head {
+  margin-bottom: 0.75rem;
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: var(--accent);
+}
+
+.footer p,
+.footer li {
+  line-height: 1.7;
+}
+
+.footer a {
+  transition: color var(--transition-regular);
+}
+
+.footer a:hover {
+  color: var(--accent);
+}
+
+.footer a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+  max-width: 76rem;
+  margin: 3rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
