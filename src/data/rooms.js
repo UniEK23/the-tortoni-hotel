@@ -1,3 +1,7 @@
+import classicImg from "../assets/images/classic-room.jpg"
+import deluxeImg from "../assets/images/deluxe-room.jpg"
+import suiteImg from "../assets/images/executive-suite.jpg"
+
 export const rooms = [
     {
         id: "classic",
@@ -8,7 +12,7 @@ export const rooms = [
         size: "28 sq m",
         guests: "2 guests",
         price: 95000,
-        image: "/src/assets/images/classic-room.jpg",
+        image: classicImg,
         alt: "Classic Room at The Tortoni",
     },
     {
@@ -20,7 +24,7 @@ export const rooms = [
         size: "36 sq m",
         guests: "2 guests",
         price: 130000,
-        image: "/src/assets/images/deluxe-room.jpg",
+        image: deluxeImg,
         alt: "Deluxe Room at The Tortoni",
     },
     {
@@ -32,7 +36,7 @@ export const rooms = [
         size: "58 sq m",
         guests: "3 guests",
         price: 210000,
-        image: "/src/assets/images/executive-suite.jpg",
+        image: suiteImg,
         alt: "Executive Suite at The Tortoni",
     },
 ];
