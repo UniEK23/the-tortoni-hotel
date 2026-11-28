@@ -17,8 +17,6 @@ function Reviews() {
           </blockquote>
         ))}
       </div>
-
-      <p className="reviews__note">Sample reviews for the demo.</p>
     </section>
   );
 }
